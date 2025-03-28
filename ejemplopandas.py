@@ -79,15 +79,15 @@ def abrir_consultas():
     ]
     
     frame_consultas = tk.Frame(ventana_consultas)
-    frame_consultas.pack(side=tk.LEFT, padx=10, pady=10)
+    frame_consultas.pack(side=tk.LEFT, padx=50, pady=50)
     
     for consulta in consultas:
         tk.Button(frame_consultas, text=consulta, command=lambda c=consulta: ejecutar_consulta(c)).pack(pady=5)
     
     frame_resultado = tk.Frame(ventana_consultas)
-    frame_resultado.pack(side=tk.RIGHT, padx=10, pady=10)
+    frame_resultado.pack(side=tk.RIGHT, padx=50, pady=50)
     
-    text_resultado = tk.Text(frame_resultado, width=80, height=25)
+    text_resultado = tk.Text(frame_resultado, width=180, height=100)
     text_resultado.pack()
     
     ventana_consultas.mainloop()
